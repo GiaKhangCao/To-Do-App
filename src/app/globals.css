@@ -1,26 +1,25 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.app {
+	margin: auto;
+	padding: 10px;
+	width: 30%;
+	max-width: 30%;
+	margin-top: 100px;
+	text-align: center;
+	border: 2px solid blue;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.addBox,
+.taskText {
+	margin-right: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.taskContainer {
+	width: fit-content;
+	max-width: 100%;
+	/* border: 2px solid red; */
+	text-align: left;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	overflow-y: auto;
+	max-height: 300px;
 }
