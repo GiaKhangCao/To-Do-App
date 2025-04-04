@@ -9,8 +9,20 @@
 }
 
 .addBox,
-.taskText {
-	margin-right: 2px;
+.taskText,
+.upButton,
+.downButton {
+	margin-right: 5px;
+	margin-bottom: 20px;
+}
+
+button :hover {
+	background-color: #ddd;
+}
+
+button,
+input[type="checkbox"] {
+	cursor: pointer;
 }
 
 .taskContainer {
