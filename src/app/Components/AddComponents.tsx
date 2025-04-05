@@ -63,7 +63,7 @@ const AddComponents = () => {
 	};
 
 	return (
-		<>
+		<div className="contentBox">
 			<div className="addContainer">
 				<input
 					type="text"
@@ -83,7 +83,7 @@ const AddComponents = () => {
 				handleUpFunction={handelUp}
 				handleDownFunction={handleDown}
 			/>
-		</>
+		</div>
 	);
 };
 

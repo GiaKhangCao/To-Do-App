@@ -1,4 +1,5 @@
 import React from "react";
+import { Trash2, MoveUp, MoveDown, Check } from "lucide-react";
 
 interface TaskComponentProps {
 	tasks: string[];
@@ -16,22 +17,25 @@ const TaskComponent: React.FC<TaskComponentProps> = ({
 	return (
 		<div className="taskContainer">
 			{tasks.map((task, index) => (
-				<div key={index} className="taskItem">
+				<label key={index} className="taskItem">
 					<input type="checkbox" className="checkbox" />
-					<span className="taskText">{task}</span>
+					<span className="checkMark">
+						<Check className="checkIcon" size={16} />
+					</span>
+					<p className="taskText">{task}</p>
 					<button className="upButton" onClick={() => handleUpFunction(index)}>
-						Up
+						<MoveUp className="upIcon" />
 					</button>
 					<button
 						className="downButton"
 						onClick={() => handleDownFunction(index)}
 					>
-						Down
+						<MoveDown />
 					</button>
 					<button className="deleteButton" onClick={() => deleFunction(index)}>
-						Delete
+						<Trash2 />
 					</button>
-				</div>
+				</label>
 			))}
 		</div>
 	);
